@@ -2,7 +2,8 @@ import React from "react";
 import Logo from "../../components/Logo/Logo";
 import Nav from "../../components/Nav/Nav";
 import CartLink from "../../components/CartLink/CartLink";
-export default () => {
+
+export default ({ children }) => {
   return (
     <div className="Layout">
       <nav>
@@ -10,7 +11,7 @@ export default () => {
         <Nav />
         <CartLink />
       </nav>
-      <main>{props.children}</main>
+      <main>{children}</main>
     </div>
   );
 };
